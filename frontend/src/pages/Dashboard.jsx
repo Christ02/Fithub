@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import CalorieTracker from '../components/CalorieTracker/CalorieTracker';
 import SleepTracker from '../components/SleepTracker/SleepTracker';
 import ExerciseTracker from '../components/ExerciseTracker/ExerciseTracker';
+import FooterNav from '../components/FooterNav/FooterNav';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -15,6 +16,7 @@ const Dashboard = () => {
           <CalorieTracker />
           <SleepTracker />
           <ExerciseTracker />
+          <FooterNav />
         </div>
       </div>
     </div>
