@@ -1,0 +1,91 @@
+.food-log {
+    background-color: #151724; 
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .food-log-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .food-log-content h2 {
+    font-size: 20px;
+    color: #56C1FF; 
+    margin-bottom: 20px;
+  }
+  
+  .date-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .date-picker span {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .date-picker input {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .meal-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  
+  .meal-section h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+  
+  .add-food-link {
+    font-size: 14px;
+    color: #56C1FF;
+    text-decoration: none;
+  }
+  
+  .add-food-link:hover {
+    text-decoration: underline;
+  }
+  
+  .nutrient-summary {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .nutrient-summary table {
+    width: 100%;
+    background-color: #212121;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .nutrient-summary th, .nutrient-summary td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .nutrient-summary th {
+    background-color: #333;
+    color: #56C1FF;
+  }
+  
+  .nutrient-summary td {
+    color: white;
+  }
+  

@@ -62,4 +62,22 @@
     width: 24px;
     height: 24px;
   }
+  .app-header .app-name {
+    text-decoration: none; 
+    color: #56C1FF; 
+  }
+  
+  .app-header .app-name:hover {
+    text-decoration: none; 
+  }
+  
+  .app-header .header-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .app-header .header-nav a:hover {
+    text-decoration: underline; 
+  }
   
