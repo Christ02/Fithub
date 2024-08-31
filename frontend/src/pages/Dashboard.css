@@ -1,17 +1,16 @@
-/* Importar la fuente si no lo has hecho en el HTML */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif; /* Aplica Roboto como fuente principal */
-  background-color: #121212;  /* Color de fondo oscuro */
-  color: white;  /* Texto en blanco */
+  background-color: #151724;  
+  color: white;  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .dashboard {
-  background-color: #121212;
+  background-color: #151724;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
