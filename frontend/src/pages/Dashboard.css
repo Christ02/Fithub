@@ -1,62 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-  font-family: 'Roboto', sans-serif; /* Aplica Roboto como fuente principal */
-  background-color: #151724;  
-  color: white;  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.dashboard {
-  background-color: #151724;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .dashboard-content {
   padding: 20px;
 }
 
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-
 .summary-card {
-  background-color: #1E1E1E;
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  color: white;
 }
 
-.summary-card h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-}
-
-.summary-card p {
-  font-family: 'Roboto', sans-serif;
-}
-
-.premium-button, .calories-main, .calorie-detail {
-  font-family: 'Roboto', sans-serif;
-}
 h1, h2, h3 {
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 p, span {
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 button {

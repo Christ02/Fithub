@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Header.css';
 
-const Header = () => {
+const Header = ({ toggleTheme, currentTheme }) => {
   return (
     <header className="app-header">
       <div className="header-left">
-        <Link to="/" className="app-name"> {/* Envolver FitHub con Link */}
+        <Link to="/" className="app-name">
           <h1 className="app-name">FitHub</h1>
         </Link>
       </div>
@@ -19,7 +19,15 @@ const Header = () => {
       </nav>
       <div className="header-right">
         <button className="premium-button">Go Premium</button>
-
+        <div 
+          className={`theme-toggle ${currentTheme}`} 
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          <div className="toggle-circle"></div>
+          <div className="icon sun-icon">☀️</div>
+          <div className="icon moon-icon">🌙</div>
+        </div>
       </div>
     </header>
   );

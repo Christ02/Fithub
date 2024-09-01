@@ -1,22 +1,16 @@
-.food-log {
-    background-color: #151724; 
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .food-log-content {
+.food-log-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--content-background); /* Fondo adaptable al tema */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .food-log-content h2 {
-    font-size: 20px;
-    color: #56C1FF; 
+    font-size: 22px;
     margin-bottom: 20px;
+    color: var(--primary-color); /* Color adaptable al tema */
   }
   
   .date-picker {
@@ -29,32 +23,34 @@
   .date-picker span {
     font-size: 16px;
     margin-right: 10px;
+    color: var(--primary-color); /* Color adaptable al tema */
   }
   
   .date-picker input {
-    background-color: #333;
-    color: white;
+    background-color: var(--input-background);
+    color: var(--input-color);
     border: none;
     padding: 5px;
     border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .meal-section {
     margin-bottom: 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
     text-align: left;
   }
   
   .meal-section h3 {
     font-size: 18px;
-    color: #FFFFFF;
     margin-bottom: 5px;
+    color: var(--text-color); /* Color adaptable al tema */
   }
   
   .add-food-link {
     font-size: 14px;
-    color: #56C1FF;
+    color: var(--link-color); /* Color adaptable al tema */
     text-decoration: none;
   }
   
@@ -69,23 +65,51 @@
   
   .nutrient-summary table {
     width: 100%;
-    background-color: #212121;
+    background-color: var(--table-background);
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .nutrient-summary th, .nutrient-summary td {
     padding: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
   }
   
   .nutrient-summary th {
-    background-color: #333;
-    color: #56C1FF;
+    background-color: var(--header-background);
+    color: var(--header-color);
   }
   
   .nutrient-summary td {
-    color: white;
+    color: var(--text-color);
+  }
+  
+  /* Variables para colores según el tema */
+  :root {
+    --content-background: #ffffff;
+    --primary-color: #333333;
+    --input-background: #e0e0e0;
+    --input-color: #333333;
+    --border-color: #cccccc;
+    --text-color: #333333;
+    --link-color: #007BFF;
+    --table-background: #f9f9f9;
+    --header-background: #e0e0e0;
+    --header-color: #333333;
+  }
+  
+  body.dark {
+    --content-background: #1e1e1e; /* Cambiado para un mejor contraste en dark mode */
+    --primary-color: #ffffff;
+    --input-background: #333333;
+    --input-color: #ffffff;
+    --border-color: #444444;
+    --text-color: #ffffff;
+    --link-color: #56C1FF;
+    --table-background: #2a2a2a; /* Fondo más oscuro para las tablas en dark mode */
+    --header-background: #333333;
+    --header-color: #56C1FF;
   }
   
