@@ -46,7 +46,7 @@ Para trabajar en este proyecto, sigue estos pasos:
 ### Clona el repositorio:
 
 ```bash
-git clone <URL-del-repositorio>
+git clone https://github.com/Christ02/Fithub.git
 cd frontend
 ```
 
@@ -65,7 +65,6 @@ Dependencias adicionales necesarias:
 Puedes instalarlas todas con el siguiente comando:
 
 ```bash
-Copy code
 npm install react-router-dom react-icons date-fns react-datepicker sweetalert2
 ```
 Inicia el servidor de desarrollo:
