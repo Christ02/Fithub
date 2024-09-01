@@ -1,65 +1,28 @@
-// src/components/Calculator/ActivityLevel.jsx
-import React, { useState } from 'react';
+import React from 'react';
 
-const ActivityLevel = ({ nextStep, prevStep, updateData }) => {
-  const [activityLevel, setActivityLevel] = useState('');
-
-  const handleSubmit = () => {
-    updateData({ activityLevel });
-    nextStep();
-  };
+const ActivityLevel = ({ nextStep, prevStep, handleInputChange, formData }) => {
+  const { activityLevel } = formData;
 
   return (
-    <div className="activity-level">
+    <div className="calculator-section">
       <h2>Activity Level</h2>
-      <form>
-        <label>
-          <input
-            type="radio"
-            value="sedentary"
-            checked={activityLevel === 'sedentary'}
-            onChange={(e) => setActivityLevel(e.target.value)}
-          />
-          Sedentary (little or no exercise)
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="light"
-            checked={activityLevel === 'light'}
-            onChange={(e) => setActivityLevel(e.target.value)}
-          />
-          Light (light exercise/sports 1-3 days/week)
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="moderate"
-            checked={activityLevel === 'moderate'}
-            onChange={(e) => setActivityLevel(e.target.value)}
-          />
-          Moderate (moderate exercise/sports 3-5 days/week)
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="active"
-            checked={activityLevel === 'active'}
-            onChange={(e) => setActivityLevel(e.target.value)}
-          />
-          Active (hard exercise/sports 6-7 days a week)
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="very-active"
-            checked={activityLevel === 'very-active'}
-            onChange={(e) => setActivityLevel(e.target.value)}
-          />
-          Very Active (very hard exercise/physical job)
-        </label>
-        <button type="button" onClick={prevStep}>Back</button>
-        <button type="button" onClick={handleSubmit}>Next</button>
+      <form className="calculator-form">
+        <div className="form-group">
+          <label>Select your activity level:</label>
+          <select value={activityLevel} onChange={handleInputChange('activityLevel')} required>
+            <option value="">Select...</option>
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly active">Lightly Active</option>
+            <option value="moderately active">Moderately Active</option>
+            <option value="very active">Very Active</option>
+            <option value="super active">Super Active</option>
+          </select>
+        </div>
+
+        <div className="button-group">
+          <button type="button" className="prev-button" onClick={prevStep}>Back</button>
+          <button type="button" className="next-button" onClick={nextStep}>Next</button>
+        </div>
       </form>
     </div>
   );

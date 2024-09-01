@@ -1,38 +1,40 @@
-// src/components/Calculator/CalorieCalculator.jsx
 import React, { useState } from 'react';
 import BasicInfo from './BasicInfo';
 import ActivityLevel from './ActivityLevel';
 import HealthGoals from './HealthGoals';
-import DietaryPreferences from './DietaryPreferences';
 import Result from './Result';
 import './CalorieCalculator.css';
 
 const CalorieCalculator = () => {
   const [step, setStep] = useState(1);
-  const [data, setData] = useState({
-    age: '',
-    sex: '',
+  const [formData, setFormData] = useState({
+    birthDate: '',
+    gender: '',
     height: '',
     weight: '',
     activityLevel: '',
-    goal: '',
-    dietaryPreference: '',
+    healthGoals: ''
   });
 
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
 
-  const updateData = (newData) => setData({ ...data, ...newData });
+  const handleInputChange = (input) => (e) => {
+    setFormData({ ...formData, [input]: e.target.value });
+  };
 
-  return (
-    <div className="calorie-calculator">
-      {step === 1 && <BasicInfo nextStep={nextStep} updateData={updateData} />}
-      {step === 2 && <ActivityLevel nextStep={nextStep} prevStep={prevStep} updateData={updateData} />}
-      {step === 3 && <HealthGoals nextStep={nextStep} prevStep={prevStep} updateData={updateData} />}
-      {step === 4 && <DietaryPreferences nextStep={nextStep} prevStep={prevStep} updateData={updateData} />}
-      {step === 5 && <Result data={data} prevStep={prevStep} />}
-    </div>
-  );
+  switch (step) {
+    case 1:
+      return <BasicInfo nextStep={nextStep} handleInputChange={handleInputChange} formData={formData} />;
+    case 2:
+      return <ActivityLevel nextStep={nextStep} prevStep={prevStep} handleInputChange={handleInputChange} formData={formData} />;
+    case 3:
+      return <HealthGoals nextStep={nextStep} prevStep={prevStep} handleInputChange={handleInputChange} formData={formData} />;
+    case 4:
+      return <Result prevStep={prevStep} formData={formData} />;
+    default:
+      return <BasicInfo nextStep={nextStep} handleInputChange={handleInputChange} formData={formData} />;
+  }
 };
 
 export default CalorieCalculator;

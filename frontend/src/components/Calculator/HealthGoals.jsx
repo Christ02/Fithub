@@ -1,47 +1,27 @@
-// src/components/Calculator/HealthGoals.jsx
-import React, { useState } from 'react';
+import React from 'react';
 
-const HealthGoals = ({ nextStep, prevStep, updateData }) => {
-  const [goal, setGoal] = useState('');
-
-  const handleSubmit = () => {
-    updateData({ goal });
-    nextStep();
-  };
+const HealthGoals = ({ nextStep, prevStep, handleInputChange, formData }) => {
+  const { healthGoals } = formData;
 
   return (
-    <div className="health-goals">
+    <div className="calculator-section">
       <h2>Health Goals</h2>
-      <form>
-        <label>
-          <input
-            type="radio"
-            value="lose-weight"
-            checked={goal === 'lose-weight'}
-            onChange={(e) => setGoal(e.target.value)}
-          />
-          Lose Weight
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="maintain-weight"
-            checked={goal === 'maintain-weight'}
-            onChange={(e) => setGoal(e.target.value)}
-          />
-          Maintain Weight
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="gain-muscle"
-            checked={goal === 'gain-muscle'}
-            onChange={(e) => setGoal(e.target.value)}
-          />
-          Gain Muscle
-        </label>
-        <button type="button" onClick={prevStep}>Back</button>
-        <button type="button" onClick={handleSubmit}>Next</button>
+      <form className="calculator-form">
+        <div className="form-group">
+          <label>Select your health goal:</label>
+          <select value={healthGoals} onChange={handleInputChange('healthGoals')} required>
+            <option value="">Select...</option>
+            <option value="lose weight">Lose Weight</option>
+            <option value="maintain weight">Maintain Weight</option>
+            <option value="gain muscle">Gain Muscle</option>
+            <option value="increase endurance">Increase Endurance</option>
+          </select>
+        </div>
+
+        <div className="button-group">
+          <button type="button" className="prev-button" onClick={prevStep}>Back</button>
+          <button type="button" className="next-button" onClick={nextStep}>Next</button>
+        </div>
       </form>
     </div>
   );

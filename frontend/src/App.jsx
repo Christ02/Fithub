@@ -5,6 +5,7 @@ import FoodLog from './pages/FoodLogPage';
 import Header from './components/Header/Header';
 import FooterNav from './components/FooterNav/FooterNav';
 import ProfileInfo from './components/Profile/ProfileInfo';
+import CalculatorPage from './pages/CalculatorPage'; 
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<DashboardPage  />} />
         <Route path="/food-log" element={<FoodLog />} />
         <Route path="/profile" element={<ProfileInfo />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
       </Routes>
       <FooterNav />
     </Router>

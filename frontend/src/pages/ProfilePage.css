@@ -1,0 +1,19 @@
+/* src/pages/ProfilePage.css */
+.profile-tools {
+    margin-top: 20px;
+  }
+  
+  .tool-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .tool-link:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
