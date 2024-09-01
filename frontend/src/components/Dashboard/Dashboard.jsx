@@ -2,7 +2,6 @@ import React from 'react';
 import DailySummary from './DailySummary';
 import ActivityOverview from './ActivityOverview';
 import SleepOverview from './SleepOverview';
-import './Dashboard.css';
 
 const Dashboard = () => {
   return (

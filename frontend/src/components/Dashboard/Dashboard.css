@@ -1,0 +1,30 @@
+.dashboard {
+  padding: 20px;
+  background-color: #151724; /* Fondo oscuro */
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #56C1FF;
+}
+
+.summary-card {
+  background-color: #1E1E1E;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.summary-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
