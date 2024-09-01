@@ -43,13 +43,12 @@ FitHub es una plataforma diseñada para permitir a los usuarios registrar y moni
 ## Instalación
 Para trabajar en este proyecto, sigue estos pasos:
 
-Clona el repositorio:
+### Clona el repositorio:
 
-bash
-Copy code
+```bash
 git clone <URL-del-repositorio>
 cd frontend
-Instala las dependencias:
+```
 
 bash
 Copy code
