@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/DashboardPage';
 import FoodLog from './pages/FoodLog';
 import Header from './components/Header/Header';
 import FooterNav from './components/FooterNav/FooterNav';
