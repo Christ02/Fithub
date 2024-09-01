@@ -39,7 +39,8 @@ FitHub es una plataforma diseñada para permitir a los usuarios registrar y moni
 ├── .gitignore               # Archivos y carpetas a ignorar por Git
 ├── vite.config.js           # Configuración de Vite
 └── README.md                # Documentación del proyecto
-Instalación
+```
+## Instalación
 Para trabajar en este proyecto, sigue estos pasos:
 
 Clona el repositorio:
