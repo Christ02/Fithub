@@ -50,33 +50,36 @@ git clone <URL-del-repositorio>
 cd frontend
 ```
 
-bash
-Copy code
+```bash
 npm install
+```
+
 Dependencias adicionales necesarias:
 
-React Router DOM: Para la navegación entre páginas.
-React Icons: Para añadir íconos fácilmente en los componentes.
-date-fns: Para el manejo de fechas y formateo.
-react-datepicker: Selector de fechas amigable y customizable.
-sweetalert2: Para alertas modales atractivas y personalizables.
+- React Router DOM: Para la navegación entre páginas.
+- React Icons: Para añadir íconos fácilmente en los componentes.
+- date-fns: Para el manejo de fechas y formateo.
+- react-datepicker: Selector de fechas amigable y customizable.
+- sweetalert2: Para alertas modales atractivas y personalizables.
+
 Puedes instalarlas todas con el siguiente comando:
 
-bash
+```bash
 Copy code
 npm install react-router-dom react-icons date-fns react-datepicker sweetalert2
+```
 Inicia el servidor de desarrollo:
 
-bash
-Copy code
+```bash
 npm run dev
+```
 Compila para producción:
 
-bash
-Copy code
+```bash
 npm run build
+```
 Previsualiza la versión de producción:
 
-bash
-Copy code
+```bash
 npm run preview
+```
