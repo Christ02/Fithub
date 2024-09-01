@@ -71,3 +71,24 @@ body.light .summary-card {
   background-color: #e0e0e0;
   color: black;
 }
+
+/* src/index.css */
+:root {
+  --content-background: #ffffff;
+  --primary-color: #333333;
+  --input-background: #e0e0e0;
+  --input-color: #333333;
+  --border-color: #cccccc;
+  --text-color: #333333;
+  --button-text-color: #ffffff;
+}
+
+body.dark {
+  --content-background: #1e1e1e;
+  --primary-color: #ffffff;
+  --input-background: #333333;
+  --input-color: #ffffff;
+  --border-color: #444444;
+  --text-color: #ffffff;
+  --button-text-color: #ffffff;
+}

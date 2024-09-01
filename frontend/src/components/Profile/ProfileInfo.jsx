@@ -1,16 +1,22 @@
 // src/components/Profile/ProfileInfo.jsx
 import React, { useState } from 'react';
+import Swal from 'sweetalert2'; // Importa SweetAlert2
 import './ProfileInfo.css';
 
 const ProfileInfo = () => {
-  const [name, setName] = useState("John Doe");
-  const [email, setEmail] = useState("john.doe@example.com");
-  const [height, setHeight] = useState(175);
-  const [weight, setWeight] = useState(70);
-
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [height, setHeight] = useState();
+    const [weight, setWeight] = useState();
+  
   const handleSave = () => {
-    // Lógica para guardar la información
-    alert('Profile updated successfully!');
+    // Aquí puedes agregar la lógica para guardar la información
+    Swal.fire({
+      title: 'Profile Updated!',
+      text: 'Your profile information has been successfully updated.',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    });
   };
 
   return (
