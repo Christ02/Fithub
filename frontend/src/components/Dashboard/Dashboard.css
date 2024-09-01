@@ -1,13 +1,26 @@
+/* src/components/Dashboard/Dashboard.css */
 .dashboard {
   padding: 20px;
-  background-color: #151724; /* Fondo oscuro */
+  background-color: #151724;
   color: white;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.summary-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.summary-header h2 {
+  font-size: 28px;
   color: #56C1FF;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.summary-subtitle {
+  font-size: 18px;
+  color: #AAB0B6;
+  margin-bottom: 20px;
 }
 
 .summary-card {

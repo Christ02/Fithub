@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import DashboardPage  from './pages/DashboardPage';
-import FoodLog from './pages/FoodLog';
+import FoodLog from './pages/FoodLogPage';
 import Header from './components/Header/Header';
 import FooterNav from './components/FooterNav/FooterNav';
 

@@ -1,0 +1,144 @@
+.food-log {
+  padding: 20px;
+  background-color: var(--content-background);
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.food-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.food-log-header h2 {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+}
+
+.date-picker span {
+  font-size: 16px;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.date-picker input {
+  background-color: var(--input-background);
+  color: var(--input-color);
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.meal-section h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.add-food-link {
+  font-size: 14px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.add-food-link:hover {
+  text-decoration: underline;
+}
+
+.nutritional-summary {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.nutritional-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  min-width: 400px;
+  background-color: var(--table-background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nutritional-summary th, .nutritional-summary td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nutritional-summary th {
+  background-color: var(--header-background);
+  color: var(--header-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutritional-summary td {
+  color: var(--text-color);
+}
+
+.nutritional-summary tr:last-of-type td {
+  border-bottom: 0;
+}
+
+.nutritional-summary tr:nth-of-type(even) {
+  background-color: var(--table-background-alt);
+}
+
+.nutritional-summary tr:hover td {
+  background-color: var(--hover-background);
+  color: var(--hover-color);
+}
+
+/* Variables para colores según el tema */
+:root {
+  --content-background: #ffffff;
+  --primary-color: #333333;
+  --input-background: #e0e0e0;
+  --input-color: #333333;
+  --border-color: #cccccc;
+  --text-color: #333333;
+  --link-color: #007BFF;
+  --table-background: #f9f9f9;
+  --header-background: #e0e0e0;
+  --header-color: #333333;
+  --table-background-alt: #f1f1f1;
+  --hover-background: #e0e0e0;
+  --hover-color: #000;
+}
+
+body.dark {
+  --content-background: #1e1e1e;
+  --primary-color: #ffffff;
+  --input-background: #333333;
+  --input-color: #ffffff;
+  --border-color: #444444;
+  --text-color: #ffffff;
+  --link-color: #56C1FF;
+  --table-background: #2a2a2a;
+  --header-background: #333333;
+  --header-color: #56C1FF;
+  --table-background-alt: #2b2b2b;
+  --hover-background: #3a3a3a;
+  --hover-color: #fff;
+}

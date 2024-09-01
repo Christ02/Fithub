@@ -6,7 +6,10 @@ import SleepOverview from './SleepOverview';
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2>Today's Summary</h2>
+      <div className="summary-header">
+        <h2>Welcome Back!</h2>
+        <p className="summary-subtitle">Here's your summary for today. Keep up the great work!</p>
+      </div>
       <DailySummary />
       <ActivityOverview />
       <SleepOverview />
