@@ -17,7 +17,7 @@ const Header = ({ toggleTheme, currentTheme, setshowLogin}) => {
         <Link to="/profile">Profile</Link>
       </nav>
       <div className="header-right">
-        <button onClick={()=>setshowLogin(true)} className='premium-button'>sign in</button>
+        <button onClick={()=>setshowLogin(true)} className='premium-button'>Sign In</button>
         <div 
           className={`theme-toggle ${currentTheme}`} 
           onClick={toggleTheme}

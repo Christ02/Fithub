@@ -42,9 +42,3 @@
   margin: 5px 0;
 }
 
-/*responsive*/
-@media (min-width:900px){
-  .summary-card {
-    padding: -2rem;    
-  }
-}
