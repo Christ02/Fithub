@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import '../../assets/cross_icon.svg';
+import crossIcon from '../../assets/cross_icon.svg';
 
 const Login = ({setshowLogin}) => {
 
@@ -11,7 +11,7 @@ const Login = ({setshowLogin}) => {
       <form className="login-container">
         <div className='login-title'>
             <h2>{currState}</h2>
-            { /*<img onClick={()=>setshowLogin(false)} src= {assets.cross_icon} alt="" /> */}
+            <img onClick={() => setshowLogin(false)} src={crossIcon} alt="Close" />
         </div>
         <div className='login-inputs'>
             {currState==="Login"?<></>:<input type='text' placeholder='Your name' required />}
