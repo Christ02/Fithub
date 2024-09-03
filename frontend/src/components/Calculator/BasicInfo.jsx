@@ -7,6 +7,7 @@ const BasicInfo = ({ nextStep, handleInputChange, formData }) => {
   const calculateAge = (birthDate) => {
     const today = new Date();
     const birthDateObj = new Date(birthDate);
+    if (isNaN(birthDateObj.getTime())) return ''; // Si birthDate es inválido, devuelve vacío
     let age = today.getFullYear() - birthDateObj.getFullYear();
     const monthDifference = today.getMonth() - birthDateObj.getMonth();
     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDateObj.getDate())) {
@@ -18,8 +19,11 @@ const BasicInfo = ({ nextStep, handleInputChange, formData }) => {
   const handleDateChange = (date) => {
     const age = calculateAge(date);
     handleInputChange('age')({ target: { value: age } });
-    handleInputChange('birthDate')({ target: { value: date } });
+    handleInputChange('birthDate')({ target: { value: date.toISOString().split('T')[0] } });
   };
+
+  // Asegúrate de que birthDate sea una fecha válida
+  const selectedDate = birthDate ? new Date(birthDate) : null;
 
   return (
     <div className="calculator-section">
@@ -31,7 +35,7 @@ const BasicInfo = ({ nextStep, handleInputChange, formData }) => {
         <div className="form-group">
           <label>Date of Birth:</label>
           <CustomDatePicker
-            selectedDate={new Date(birthDate)} 
+            selectedDate={selectedDate} 
             onChange={handleDateChange} 
           />
         </div>
