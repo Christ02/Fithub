@@ -6,9 +6,13 @@ import Header from './components/Header/Header';
 import FooterNav from './components/FooterNav/FooterNav';
 import ProfileInfo from './components/Profile/ProfileInfo';
 import CalculatorPage from './pages/CalculatorPage'; 
+import Login from './components/Login/Login';
 
 
 function App() {
+
+  const [showLogin,setshowLogin] = useState(false)
+
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
@@ -19,17 +23,22 @@ function App() {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+
   return (
-    <Router>
-      <Header toggleTheme={toggleTheme} currentTheme={theme} />
-      <Routes>
-        <Route path="/" element={<DashboardPage  />} />
-        <Route path="/food-log" element={<FoodLog />} />
-        <Route path="/profile" element={<ProfileInfo />} />
-        <Route path="/calculator" element={<CalculatorPage />} />
-      </Routes>
-      <FooterNav />
-    </Router>
+    <>
+    {showLogin?<Login setshowLogin={setshowLogin}/>:<></>}
+      
+      <Router>
+        <Header toggleTheme={toggleTheme} currentTheme={theme} setshowLogin={setshowLogin} />
+        <Routes>
+          <Route path="/" element={<DashboardPage  />} />
+          <Route path="/food-log" element={<FoodLog />} />
+          <Route path="/profile" element={<ProfileInfo />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
+        </Routes>
+        <FooterNav />
+      </Router>
+    </>
   );
 }
 

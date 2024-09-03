@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Header.css';
 
-const Header = ({ toggleTheme, currentTheme }) => {
+const Header = ({ toggleTheme, currentTheme, setshowLogin}) => {
   return (
     <header className="app-header">
       <div className="header-left">
@@ -13,12 +13,11 @@ const Header = ({ toggleTheme, currentTheme }) => {
       <nav className="header-nav">
         <Link to="/">Home</Link>
         <Link to="/goals">Goals</Link>
-        <Link to="/log">Log</Link>
         <Link to="/food-log">Food Log</Link>
         <Link to="/profile">Profile</Link>
       </nav>
       <div className="header-right">
-        <button className="premium-button">Go Premium</button>
+        <button onClick={()=>setshowLogin(true)} className='premium-button'>sign in</button>
         <div 
           className={`theme-toggle ${currentTheme}`} 
           onClick={toggleTheme}
