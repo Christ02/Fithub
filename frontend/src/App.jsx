@@ -8,11 +8,9 @@ import ProfileInfo from './components/Profile/ProfileInfo';
 import CalculatorPage from './pages/CalculatorPage'; 
 import Login from './components/Login/Login';
 
-
 function App() {
 
   const [showLogin,setshowLogin] = useState(false)
-
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {

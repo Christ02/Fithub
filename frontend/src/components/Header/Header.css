@@ -147,4 +147,53 @@
   .app-name {
     color: #56C1FF !important;
   }
+
+  .navbar-profile{
+    position: relative;
+    padding: 20px; /* Puedes ajustar el padding si quieres más espacio interno */
+    cursor: pointer; /* Muestra un cursor de mano al hacer hover */
+
+  }
+  .navbar-profile img{
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    filter: brightness(0) invert(1); /* Cambia el color del PNG a blanco */
+
+  }
+
+  .nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+  }
+  .navbar-profile:hover .nav-profile-dropdown,
+.nav-profile-dropdown:hover {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--hover-background);
+    padding: 2px 13px;
+    border-radius: 4px;
+    border: 1px var(--link-color);
+    outline: 2px solid white;
+    list-style: none;
+}
+  .nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+  }
+  .nav-profile-dropdown img{
+    width: 20px;
+
+  }
+  .nav-profile-dropdown p:hover{
+    color: var(--link-color);
+  }
+
   
