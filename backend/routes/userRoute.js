@@ -9,6 +9,5 @@ const userRouter = express.Router()
 userRouter.post("/register", registerUser)
 userRouter.post("/login", loginUser)
 
-//router.get('/profile', getUserProfile);  // Ejemplo de ruta protegida
 
 export default userRouter;
