@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './foodEntryForm.css';
 
 const FoodEntryForm = ({ onAddFood }) => {
   const [foodItem, setFoodItem] = useState('');

@@ -1,5 +1,6 @@
 // src/components/FoodLog/NutritionalSummary.jsx
 import React, { useState } from 'react';
+import './nutritionalSummary.css'
 
 const NutritionalSummary = ({ foods }) => {
   const [setFoods] = useState(foods);
@@ -40,7 +41,7 @@ const NutritionalSummary = ({ foods }) => {
           </tr>
         </tbody>
       </table>
-      <button onClick={handleClear}>Clear</button>
+      <button onClick={handleClear} className='clearButton'>Clear</button>
     </div>
   );
 };

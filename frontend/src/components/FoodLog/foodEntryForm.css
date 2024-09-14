@@ -1,0 +1,56 @@
+.food-entry-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(210, 200, 200, 0.1);
+    color: var(--text-color);
+  }
+  
+  .food-entry-form input,
+  .food-entry-form button {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+  
+  .food-entry-form input:focus {
+    border-color: var(--button-bg);
+    outline: none;
+    box-shadow: 0 0 0 0.2em rgba(38, 143, 255, 0.25);
+  }
+  
+  .food-entry-form button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .food-entry-form button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .food-entry-form button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+  }
+  
+  .food-entry-form div {
+    margin-top: 1em;
+    padding: 1em;
+    background: var(--card-bg);
+    border-radius: 4px;
+  }
+  
+  .food-entry-form p {
+    margin: 0.5em 0;
+  }
+
+  
+  
