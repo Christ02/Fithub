@@ -1,45 +1,54 @@
-const Exercise = require('../models/exerciseModel');
+// controllers/ExerciseLogController.js
+import ExerciseLogModel from '../models/ExerciseLogModel.js';
+import axios from "axios";
 
-// Get all exercises for a user
-exports.getExercises = async (req, res) => {
-  try {
-    const exercises = await Exercise.find({ userId: req.params.userId });
-    res.status(200).json(exercises);
-  } catch (error) {
-    res.status(500).json({ message: 'Error fetching exercises', error });
+// Función para manejar la solicitud de un nuevo ejercicio
+const addExercise = async (req, res) => {
+  const { name, duration, userId } = req.body;
+
+  if (!name || !duration || !userId) {
+    return res.status(400).json({ error: 'All fields are required' });
   }
-};
-
-// Add a new exercise
-exports.addExercise = async (req, res) => {
-  const { userId, exerciseName, duration, caloriesBurned } = req.body;
 
   try {
-    const newExercise = new Exercise({
-      userId,
-      exerciseName,
-      duration,
-      caloriesBurned,
+    // Llamada a una API externa para obtener la cantidad de calorías quemadas (opcional)
+    const response = await axios.get('https://example-exercise-api.com/calories', {
+      params: { exercise: name, duration }
     });
 
-    const savedExercise = await newExercise.save();
-    res.status(201).json(savedExercise);
+    const caloriesBurned = response.data.calories || 0; // Ajustar según la respuesta de la API
+
+    // Crear un nuevo registro en la base de datos usando el modelo ExerciseLog
+    const newExerciseLog = new ExerciseLogModel({
+      name,
+      duration,
+      caloriesBurned,
+      userId
+    });
+
+    await newExerciseLog.save();
+
+    res.status(200).json(newExerciseLog);
   } catch (error) {
-    res.status(500).json({ message: 'Error adding exercise', error });
+    console.error('Error fetching exercise data:', error);
+    res.status(500).json({ error: 'Failed to add exercise log' });
   }
 };
 
-exports.deleteExercise = async (req, res) => {
+// Función para obtener el registro de ejercicios de un usuario
+const getExerciseLogs = async (req, res) => {
+  const { userId } = req.params;
+
   try {
-    const exercise = await Exercise.findById(req.params.id);
-
-    if (!exercise) {
-      return res.status(404).json({ message: 'Exercise not found' });
-    }
-
-    await exercise.remove();
-    res.status(200).json({ message: 'Exercise deleted' });
+    const exerciseLogs = await ExerciseLogModel.find({ userId });
+    res.status(200).json(exerciseLogs);
   } catch (error) {
-    res.status(500).json({ message: 'Error deleting exercise', error });
+    console.error('Error fetching exercise logs:', error);
+    res.status(500).json({ error: 'Failed to fetch exercise logs' });
   }
+};
+
+export default {
+  addExercise,
+  getExerciseLogs,
 };

@@ -1,0 +1,22 @@
+.exercise-page {
+    background-color: var(--content-background);
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .page-header h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+  }
+  
+  .page-header p {
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  

@@ -1,13 +1,13 @@
-const express = require('express');
+// routes/exerciseRoute.js
+import express from 'express';
+import ExerciseLogController from '../controllers/ExerciseLogController.js';
+
 const router = express.Router();
-const {
-  getExercises,
-  addExercise,
-  deleteExercise,
-} = require('../controllers/exerciseController');
 
-router.get('/:userId', getExercises);       
-router.post('/', addExercise);              
-router.delete('/:id', deleteExercise);      
+// Ruta para añadir un nuevo ejercicio
+router.post('/add', ExerciseLogController.addExercise);
 
-module.exports = router;
+// Ruta para obtener los ejercicios de un usuario específico
+router.get('/:userId', ExerciseLogController.getExerciseLogs);
+
+export default router;

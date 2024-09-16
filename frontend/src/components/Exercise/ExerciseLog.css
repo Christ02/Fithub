@@ -1,0 +1,73 @@
+.exercise-log {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-log h2 {
+  font-size: 24px;
+  color: #56C1FF;
+}
+
+.exercise-log-content {
+  margin-bottom: 20px;
+}
+
+.exercise-entry {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exercise-entry button {
+  background-color: #FFC107;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.add-exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-exercise-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
+}
+
+.add-exercise-form button {
+  padding: 10px;
+  background-color: #56C1FF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-exercise-form button:hover {
+  background-color: #008CFF;
+}
+
+.add-exercise-form button.cancel {
+  background-color: #f44336;
+}
+
+.add-exercise-form button.cancel:hover {
+  background-color: #e53935;
+}

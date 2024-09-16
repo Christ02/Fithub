@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import foodLogRoute from "./routes/foodLogRoute.js"
 import "dotenv/config"
+// import exerciseRoute from "./routes/exerciseRoute.js"
 
 //app config
 const app = express()
@@ -20,6 +21,7 @@ connectDB();
 // api Endpoints
 app.use("/api/user", userRouter);
 app.use("/api/foods", foodLogRoute);
+// app.use("/api/exercises", exerciseRoute);
 
 
 app.get("/", (req, res) => {

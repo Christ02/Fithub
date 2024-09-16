@@ -7,6 +7,9 @@ import FooterNav from './components/FooterNav/FooterNav';
 import ProfileInfo from './components/Profile/ProfileInfo';
 import CalculatorPage from './pages/CalculatorPage'; 
 import Login from './components/Login/Login';
+import ExercisePage from './pages/ExercisePage';
+
+
 
 function App() {
 
@@ -33,6 +36,7 @@ function App() {
           <Route path="/food-log" element={<FoodLog />} />
           <Route path="/profile" element={<ProfileInfo />} />
           <Route path="/calculator" element={<CalculatorPage />} />
+          <Route path="/exercise" element={<ExercisePage />} />
         </Routes>
         <FooterNav />
       </Router>
