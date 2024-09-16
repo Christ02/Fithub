@@ -1,5 +1,5 @@
 // controllers/ExerciseLogController.js
-import ExerciseLogModel from '../models/ExerciseLogModel.js';
+import ExerciseModel from '../models/excerciseModel.js';
 import axios from "axios";
 
 // Función para manejar la solicitud de un nuevo ejercicio
@@ -19,7 +19,7 @@ const addExercise = async (req, res) => {
     const caloriesBurned = response.data.calories || 0; // Ajustar según la respuesta de la API
 
     // Crear un nuevo registro en la base de datos usando el modelo ExerciseLog
-    const newExerciseLog = new ExerciseLogModel({
+    const newExerciseLog = new ExerciseModel({
       name,
       duration,
       caloriesBurned,
@@ -40,7 +40,7 @@ const getExerciseLogs = async (req, res) => {
   const { userId } = req.params;
 
   try {
-    const exerciseLogs = await ExerciseLogModel.find({ userId });
+    const exerciseLogs = await ExerciseModel.find({ userId });
     res.status(200).json(exerciseLogs);
   } catch (error) {
     console.error('Error fetching exercise logs:', error);

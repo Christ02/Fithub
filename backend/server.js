@@ -4,7 +4,7 @@ import { connectDB } from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import foodLogRoute from "./routes/foodLogRoute.js"
 import "dotenv/config"
-// import exerciseRoute from "./routes/exerciseRoute.js"
+import exerciseRoute from "./routes/exerciseRoute.js"
 
 //app config
 const app = express()
@@ -14,20 +14,19 @@ const port = 4000
 app.use(express.json())
 app.use(cors())
 
-//DB connection
+//DB connectio
 connectDB();
 
 
 // api Endpoints
 app.use("/api/user", userRouter);
 app.use("/api/foods", foodLogRoute);
-// app.use("/api/exercises", exerciseRoute);
+app.use("/api/exercises", exerciseRoute);
 
 
 app.get("/", (req, res) => {
-    res.send("API working");
+    res.send("API working"); 
 });
-    // Endpoint POST para obtener datos nutricionales
 
 app.listen(port,()=>{
     console.log(`Server started on http://localhost:${port}`)
