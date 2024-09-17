@@ -1,0 +1,104 @@
+/* Contenedor principal */
+.sleep-log-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+}
+
+/* Título principal */
+.sleep-log-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #56C1FF;
+}
+
+/* Contenedor del formulario de registro de sueño */
+.sleep-log-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Campos del formulario */
+.sleep-log-form input, .sleep-log-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón para agregar un registro de sueño */
+.sleep-log-form button {
+    background-color: #56C1FF;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.sleep-log-form button:hover {
+    background-color: #008CFF;
+}
+
+/* Lista de registros de sueño */
+.sleep-log-list {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Elementos individuales de la lista */
+.sleep-log-list li {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto dentro de los registros */
+.sleep-log-list p {
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+/* Estilo para la duración y calidad del sueño */
+.sleep-log-list p span {
+    font-weight: bold;
+    color: #FFC107;
+}
+
+/* Para notas opcionales */
+.sleep-log-notes {
+    color: #888;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .sleep-log-container {
+        padding: 30px;
+    }
+
+    .sleep-log-form input, .sleep-log-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .sleep-log-list li {
+        padding: 15px;
+    }
+}

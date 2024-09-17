@@ -1,73 +1,107 @@
+/* Contenedor principal del log de ejercicios */
 .exercise-log {
   background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 50px auto;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 30px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
+/* Título principal */
 .exercise-log h2 {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 20px;
   color: #56C1FF;
 }
 
+/* Contenedor de los ejercicios */
 .exercise-log-content {
-  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* Entrada individual de ejercicio */
 .exercise-entry {
   background-color: #333;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 18px;
+  color: #ffffff;
 }
 
-.exercise-entry button {
-  background-color: #FFC107;
-  color: black;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
+/* Nombre del ejercicio */
+.exercise-entry p {
+  margin: 0;
+  color: #FFC107;
 }
 
+/* Formulario para agregar un nuevo ejercicio */
 .add-exercise-form {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  align-items: center;
 }
 
+/* Inputs del formulario */
 .add-exercise-form input {
-  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
   border-radius: 5px;
-  border: 1px solid #555;
-  background-color: #444;
+  border: 1px solid #444;
+  background-color: #333;
   color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
+/* Input focus */
+.add-exercise-form input:focus {
+  border-color: #56C1FF;
+}
+
+/* Botón para agregar ejercicio */
 .add-exercise-form button {
-  padding: 10px;
   background-color: #56C1FF;
-  border: none;
   color: white;
+  border: none;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
+/* Hover del botón */
 .add-exercise-form button:hover {
   background-color: #008CFF;
 }
 
-.add-exercise-form button.cancel {
-  background-color: #f44336;
-}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .exercise-log {
+      padding: 30px;
+  }
 
-.add-exercise-form button.cancel:hover {
-  background-color: #e53935;
+  .add-exercise-form input {
+      width: 100%;
+  }
+
+  .exercise-entry {
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+  }
 }

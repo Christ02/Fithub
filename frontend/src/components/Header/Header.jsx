@@ -27,6 +27,7 @@ const Header = ({ toggleTheme, currentTheme, setshowLogin}) => {
         <Link to="/">Home</Link>
         <Link to="/exercise">Exercise Log</Link>
         <Link to="/food-log">Food Log</Link>
+        <Link to="/sleep">Sleep Log</Link>
         <Link to="/profile">Profile</Link>
       </nav>
       <div className="header-right">

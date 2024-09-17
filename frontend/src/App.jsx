@@ -8,6 +8,7 @@ import ProfileInfo from './components/Profile/ProfileInfo';
 import CalculatorPage from './pages/CalculatorPage'; 
 import Login from './components/Login/Login';
 import ExercisePage from './pages/ExercisePage';
+import SleepPage from './pages/SleepLogPage'
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/profile" element={<ProfileInfo />} />
           <Route path="/calculator" element={<CalculatorPage />} />
           <Route path="/exercise" element={<ExercisePage />} />
+          <Route path="/sleep" element={<SleepPage />} />
         </Routes>
         <FooterNav />
       </Router>

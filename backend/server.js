@@ -5,6 +5,8 @@ import userRouter from "./routes/userRoute.js"
 import foodLogRoute from "./routes/foodLogRoute.js"
 import "dotenv/config"
 import exerciseRoute from "./routes/exerciseRoute.js"
+import sleepLogRoute from './routes/sleepLogRoute.js';
+
 
 //app config
 const app = express()
@@ -22,6 +24,8 @@ connectDB();
 app.use("/api/user", userRouter);
 app.use("/api/foods", foodLogRoute);
 app.use("/api/exercises", exerciseRoute);
+app.use('/api/sleep-logs', sleepLogRoute);
+
 
 
 app.get("/", (req, res) => {
