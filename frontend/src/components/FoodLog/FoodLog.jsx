@@ -17,7 +17,7 @@ const FoodLog = () => {
       <div className="food-log-header">
         <h2>Your Meal Log for:</h2>
         <div className="date-picker">
-          <span>Friday, August 30, 2024</span>
+          <span></span>
           <input type="date" />
         </div>
       </div>

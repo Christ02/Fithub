@@ -27,7 +27,7 @@
 
 /* Entrada individual de ejercicio */
 .exercise-entry {
-  background-color: #333;
+  background-color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -60,8 +60,8 @@
   padding: 12px;
   border-radius: 5px;
   border: 1px solid #444;
-  background-color: #333;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s ease;

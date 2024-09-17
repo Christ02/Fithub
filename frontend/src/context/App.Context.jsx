@@ -11,11 +11,18 @@ const AppContextProvider = (props) => {
             setToken(localStorage.getItem("token"))
         }
     },[])
-    
+
+    const logout = () => {
+        setToken(null);
+        localStorage.removeItem('token');
+        // Otras acciones de logout, como redirigir al usuario al login
+      };
+
     const contextValue = {
         url,
         token,
-        setToken
+        setToken,
+        logout
     };
 
     return (
