@@ -60,7 +60,10 @@ npm run dev
 /nombre-del-proyecto-backend
 |-- /node_modules
 |-- /routes
-|   `-- foods.js    # Archivo que define las rutas relacionadas con la nutrición
+|-- /models
+|-- /controllers
+|-- /services
+|-- /middleware
 |-- .env            # Archivo de configuración de entorno (opcional)
 |-- server.js       # Archivo principal del servidor Express
 |-- package.json    # Archivo de configuración del proyecto y dependencias
